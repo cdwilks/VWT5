@@ -3,33 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VW T5 Caravelle Annonce</title>
+    <title>À vendre : VW T5 Caravelle 4Motion LWB 2012</title>
     <style>
-        body { font-family: Arial, sans-serif; }
-        .caravelle { border: 1px solid #ccc; padding: 20px; margin: 20px; border-radius: 5px; }
-        .caravelle h2 { color: #2c3e50; }
-        .gallery { display: flex; gap: 10px; margin: 20px 0; flex-wrap: wrap; }
-        .gallery img { width: 200px; height: 150px; object-fit: cover; border-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f4f7f6; }
+        .container { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        
+        h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; margin-top: 0; }
+        .price-box { background: #e74c3c; color: white; padding: 15px; border-radius: 5px; display: inline-block; margin: 15px 0; font-weight: bold; }
+        .status-badge { background: #27ae60; color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.9em; margin-left: 10px; vertical-align: middle; }
+        
+        /* Grille de la galerie */
+        .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; margin: 25px 0; }
+        .gallery a img { width: 100%; height: 120px; object-fit: cover; border-radius: 4px; transition: 0.3s; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border: 1px solid #ddd; }
+        .gallery a:hover img { transform: scale(1.03); filter: brightness(1.1); }
+
+        /* Lightbox en pur CSS */
+        .lightbox { display: none; position: fixed; z-index: 1000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); justify-content: center; align-items: center; }
+        .lightbox:target { display: flex; }
+        .lightbox img { max-width: 90%; max-height: 80%; border: 4px solid white; border-radius: 4px; }
+        .close { position: absolute; top: 20px; right: 30px; color: white; font-size: 50px; text-decoration: none; }
+
+        .specs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .section-title { font-weight: bold; color: #2980b9; text-transform: uppercase; letter-spacing: 1px; margin-top: 25px; display: block; border-bottom: 1px solid #eee; }
+        
+        ul { padding-left: 20px; margin-top: 10px; }
+        li { margin-bottom: 5px; }
+        .contact { margin-top: 40px; padding: 20px; background: #ecf0f1; border-radius: 5px; text-align: center; }
+
+        @media (max-width: 600px) { .specs-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
-    <div class="caravelle">
-        <h2>À vendre : VW T5 Caravelle 4Motion LWB 2012</h2>
-        <p><strong>Année :</strong> 2012</p>
-        <p><strong>Kilométrage :</strong> 156,000 km</p>
-        <p><strong>Prix :</strong> 35,500 CHF</p>
-        <p><strong>Couleur :</strong>Candy Blanc</p>
-        <div class="gallery">
-            <img src="1.png" alt="VW T5 Caravelle photo 1">
+
+<div class="container">
+    <h2>VW T5 Caravelle Comfortline 4Motion 2012</h2>
+    
+    <div>
+        <span class="price-box">35,500 CHF</span>
+        <span class="status-badge">Expertisé le 02.03.2026 - Zéro défaut</span>
+    </div>
+
+    <p>Prix réduit pour vente rapide. Châssis à empattement long (LWB) avec aménagement camping-car professionnel de haute qualité.</p>
+
+    <div class="gallery">
+        <a href="#img1"><img src="1.png" alt="Photo 1"></a>
+        <a href="#img2"><img src="2.png" alt="Photo 2"></a>
+        <a href="#img3"><img src="3.png" alt="Photo 3"></a>
+        <a href="#img4"><img src="4.png" alt="Photo 4"></a>
+        <a href="#img5"><img src="5.png" alt="Photo 5"></a>
+        <a href="#img6"><img src="6.png" alt="Photo 6"></a>
+        <a href="#img7"><img src="7.png" alt="Photo 7"></a>
+        <a href="#img8"><img src="8.png" alt="Photo 8"></a>
+        <a href="#img9"><img src="9.png" alt="Photo 9"></a>
+        <a href="#img10"><img src="10.png" alt="Photo 10"></a>
+        <a href="#img11"><img src="11.png" alt="Photo 11"></a>
+        <a href="#img12"><img src="12.png" alt="Photo 12"></a>
+        <a href="#img13"><img src="13.png" alt="Photo 13"></a>
+        <a href="#img14"><img src="14.png" alt="Photo 14"></a>
+        <a href="#img15"><img src="15.png" alt="Photo 15"></a>
+    </div>
+
+    <div id="img1" class="lightbox"><a href="#" class="close">&times;</a><img src="1.png"></div>
+    <div id="img2" class="lightbox"><a href="#" class="close">&times;</a><img src="2.png"></div>
+    <div id="img3" class="lightbox"><a href="#" class="close">&times;</a><img src="3.png"></div>
+    <div id="img4" class="lightbox"><a href="#" class="close">&times;</a><img src="4.png"></div>
+    <div id="img5" class="lightbox"><a href="#" class="close">&times;</a><img src="5.png"></div>
+    <div id="img6" class="lightbox"><a href="#" class="close">&times;</a><img src="6.png"></div>
+    <div id="img7" class="lightbox"><a href="#" class="close">&times;</a><img src="7.png"></div>
+    <div id="img8" class="lightbox"><a href="#" class="close">&times;</a><img src="8.png"></div>
+    <div id="img9" class="lightbox"><a href="#" class="close">&times;</a><img src="9.png"></div>
+    <div id="img10" class="lightbox"><a href="#" class="close">&times;</a><img src="10.png"></div>
+    <div id="img11" class="lightbox"><a href="#" class="close">&times;</a><img src="11.png"></div>
+    <div id="img12" class="lightbox"><a href="#" class="close">&times;</a><img src="12.png"></div>
+    <div id="img13" class="lightbox"><a href="#" class="close">&times;</a><img src="13.png"></div>
+    <div id="img14" class="lightbox"><a href="#" class="close">&times;</a><img src="14.png"></div>
+    <div id="img15" class="lightbox"><a href="#" class="close">&times;</a><img src="15.png"></div>
+
+    <div class="specs-grid">
+        <div>
+            <span class="section-title">Essentiels du véhicule</span>
+            <ul>
+                <li><strong>Année :</strong> 2012</li>
+                <li><strong>Kilométrage :</strong> 156'000 km</li>
+                <li><strong>Moteur :</strong> 2.0 TDI 140ch / 103kW</li>
+                <li><strong>Couleur :</strong> Candy Blanc</li>
+                <li>4Motion (Traction intégrale)</li>
+                <li>Intérieur cuir</li>
+                <li>Régulateur de vitesse & Climatisation</li>
+                <li>Chauffage auxiliaire diesel Webasto d'origine</li>
+                <li>Dispositif d'attelage d'origine</li>
+            </ul>
         </div>
-        <p><strong>Caractéristiques :</strong></p>
+        <div>
+            <span class="section-title">Technologie & Confort</span>
+            <ul>
+                <li>Navigation GPS, Radio, Lecteur SD</li>
+                <li>Adaptateur Bluetooth via câble AUX</li>
+                <li>Phares et essuie-glaces automatiques</li>
+                <li>Accoudoirs conducteur et passager</li>
+                <li>Kit de gonflage et crevaison VW</li>
+            </ul>
+        </div>
+    </div>
+
+    <span class="section-title">Aménagement Camping-car Pro (Valeur CHF 18'500)</span>
+    <div class="specs-grid">
         <ul>
-            <li>Climatisation</li>
-            <li>GPS intégré</li>
-            <li>7 places</li>
-            <li>Intérieur cuir</li>
+            <li>Toit relevable Reimo Slim avec matelas double</li>
+            <li>Banquette arrière RIB convertible en lit double (ISOFix)</li>
+            <li>Siège passager pivotant</li>
+            <li>Mobilier et table EVO3</li>
+            <li>Réfrigérateur avec compartiment congélateur</li>
+            <li>Micro-ondes & Évier avec pompe électrique</li>
         </ul>
+        <ul>
+            <li>Réchaud à gaz double feux (allumage élec.)</li>
+            <li>Prises de courant 240V UK/EU/CH</li>
+            <li>Rideaux occultants & Protections thermiques</li>
+            <li>Batterie auxiliaire 12V avec charge fractionnée</li>
+            <li>Éclairage intérieur à LED & Détecteur de CO</li>
+            <li>Câble de raccordement électrique 16A</li>
+        </ul>
+    </div>
+
+    <span class="section-title">Disponible à l'achat (en supplément)</span>
+    <ul>
+        <li>Roues et pneus d'été</li>
+        <li>Roue de secours complète</li>
+        <li>Neuf : Auvent de camping indépendant (Drive-Away Awning)</li>
+    </ul>
+
+    <div class="contact">
         <p><strong>Contact :</strong> <a href="mailto:cdwilks@gmail.com?subject=VW%20T5%20Ad%20Response">cdwilks@gmail.com</a></p>
     </div>
+</div>
+
 </body>
-</html>
+            </html>
+            
